@@ -1,0 +1,49 @@
+#gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#img-container {
+    width: 800px;
+    overflow: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.sec-title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+}
+
+.arrow-one:hover, .arrow-two:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+.arrow-one {
+    color: lightblue;
+}
+
+.arrow-two {
+    color: lightcoral;
+}
+
+#img-container img {
+    border-radius: 0;
+    padding: 10px;
+}
+
+.sect-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sect-info p {
+    width: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
