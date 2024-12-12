@@ -260,17 +260,29 @@ input, label {
 }
 
 @media screen and (max-width: 600px) {
+    form {
+        height: 300px;
+        overflow: auto;
+        margin-left: 20%;
+    }
+    label {
+        display: block;
+        text-align: center;
+    }
     input, label {
-        margin-bottom: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    #payment-con {
-        margin-top: 0;
-    }
+
     #checkout, #pay, #thanks {
         width: 400px;
         height: 450px;
         margin-top: -200px;
         margin-left: -200px;
+    }
+
+    #submit-btn {
+        margin-top: 20px;
     }
 
     #item-container {
@@ -284,13 +296,6 @@ input, label {
 }
 
 @media screen and (max-width: 400px) {
-    form {
-        height: 250px;
-        overflow: auto;
-    }
-    input, label {
-        all: revert;
-    }
     #checkout, #pay, #thanks {
         width: 350px;
         margin-left: -175px;
