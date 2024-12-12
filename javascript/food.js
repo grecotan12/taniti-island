@@ -64,7 +64,6 @@ for (const addEl of addBtns) {
 }
 console.log(orders);
 
-
 const checkoutBtn = document.getElementById("checkout-btn");
 const checkoutDiv = document.getElementById("checkout");
 let total = 0;
@@ -72,49 +71,51 @@ checkoutBtn.addEventListener("click", () => {
     for (const each of document.getElementsByClassName("qty")) {
         each.children[1].textContent = "0";
     }
-    checkoutDiv.hidden = false;
-    for (const [key, value] of Object.entries(orders)) {
-        switch (key) {
-            case "Seafood Plate":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $11.99 Each</li>`;
-                total += Math.floor(11.99 * value);
-                break;
-            case "Hamburger Meal":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $10.99 each</li>`;
-                total += Math.floor(10.99 * value);
-                break;
-            case "Fish and Rice":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $12.99 each</li>`;
-                total += Math.floor(12.99 * value);
-                break;
-            case "Apple":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $1.99 each</li>`;
-                total += Math.floor(1.99 * value);
-                break;
-            case "Orange":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $1.99 each</li>`;
-                total += Math.floor(1.99 * value);
-                break;
-            case "Banana":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $1.99 each</li>`;
-                total += Math.floor(1.99 * value);
-                break;
-            case "Soda":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $1.99 each</li>`;
-                total += Math.floor(1.99 * value);
-                break;
-            case "Beer":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $5.99 each</li>`;
-                total += Math.floor(5.99 * value);
-                break;
-            case "Juice":
-                document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $2.99 each</li>`;
-                total += Math.floor(2.99 * value);
-                break;
+    if (Object.keys(orders).length > 0) {
+        checkoutDiv.hidden = false;
+        for (const [key, value] of Object.entries(orders)) {
+            switch (key) {
+                case "Seafood Plate":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $11.99 Each</li>`;
+                    total += Math.floor(11.99 * value);
+                    break;
+                case "Hamburger Meal":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $10.99 each</li>`;
+                    total += Math.floor(10.99 * value);
+                    break;
+                case "Fish and Rice":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $12.99 each</li>`;
+                    total += Math.floor(12.99 * value);
+                    break;
+                case "Apple":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $1.99 each</li>`;
+                    total += Math.floor(1.99 * value);
+                    break;
+                case "Orange":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $1.99 each</li>`;
+                    total += Math.floor(1.99 * value);
+                    break;
+                case "Banana":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $1.99 each</li>`;
+                    total += Math.floor(1.99 * value);
+                    break;
+                case "Soda":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $1.99 each</li>`;
+                    total += Math.floor(1.99 * value);
+                    break;
+                case "Beer":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $5.99 each</li>`;
+                    total += Math.floor(5.99 * value);
+                    break;
+                case "Juice":
+                    document.getElementById("orders").innerHTML += `<li>${key}: ${value}: $2.99 each</li>`;
+                    total += Math.floor(2.99 * value);
+                    break;
+            }
         }
-    }
-    if (total > 0) {
-        document.getElementById("orders").innerHTML += `<li>Total: $${total}</li>`;
+        if (total > 0) {
+            document.getElementById("orders").innerHTML += `<li>Total: $${total}</li>`;
+        }
     }
 })
 
@@ -141,6 +142,8 @@ document.getElementById("thanks-close-btn").addEventListener("click", () => {
     document.getElementById("orders").innerHTML = "";
     total = 0;
     document.getElementById("thanks").hidden = true;
+    itemsAdded.innerHTML = "";
+    orders = {};
 })
 
 document.getElementById("submit-btn").addEventListener("click", () => {

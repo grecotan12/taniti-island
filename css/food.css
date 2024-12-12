@@ -151,7 +151,6 @@ main p {
 }
 
 #checkout, #pay, #thanks {
-    margin: auto;
     width: 800px;
     height: 800px;
     position: fixed;
