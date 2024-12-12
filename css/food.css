@@ -217,3 +217,97 @@ input, label {
     justify-content: space-around;
     align-items: center;
 }
+
+@media screen and (max-width: 800px) {
+    #checkout, #pay, #thanks {
+        width: 600px;
+        height: 600px;
+        margin-top: -300px;
+        margin-left: -300px;
+    }
+
+    #submit-container {
+        margin-top: 0;
+    }
+
+    #orders {
+        font-size: 1rem;
+        height: 200px;
+    }
+
+    main h2 {
+        font-size: 3rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+
+    #online-shop {
+        flex-direction: column;
+    }
+
+    #item-container {
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 400px 400px 400px 400px;
+        width: 600px;
+    }
+
+    #cart {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    input, label {
+        margin-bottom: 0;
+    }
+    #payment-con {
+        margin-top: 0;
+    }
+    #checkout, #pay, #thanks {
+        width: 400px;
+        height: 450px;
+        margin-top: -200px;
+        margin-left: -200px;
+    }
+
+    #item-container {
+        width: 400px;
+    }
+
+    #item-container .card img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    form {
+        height: 250px;
+        overflow: auto;
+    }
+    input, label {
+        all: revert;
+    }
+    #checkout, #pay, #thanks {
+        width: 350px;
+        margin-left: -175px;
+    }
+    #item-container {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #item-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 400px 400px 400px 400px;
+        width: 200px;
+    }
+
+    #cart {
+        width: 50%;
+    }
+}

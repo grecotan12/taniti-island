@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset=”UTF-8″>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/food.css">
         <title>Food Page</title>
@@ -46,12 +47,6 @@
             <p>Click and hold on image to zoom in</p>
             <p><a href="#restaurants">Click here</a> if you want direction for dine in</p>
             <section id="online-shop">
-                <div id="cart">
-                    <h3><i class="fa-solid fa-cart-shopping"></i>Cart</h3>
-                    <ul id="item-add">
-                    </ul>
-                    <button id="checkout-btn">Checkout</button>
-                </div>
                 <div id="item-container">
                     <div class="card">
                         <h3>Seafood Plate</h3>
@@ -153,6 +148,12 @@
                         <button class="add-btn">Add To Cart</button>
                     </div>
                 </div>
+                <div id="cart">
+                    <h3><i class="fa-solid fa-cart-shopping"></i>Cart</h3>
+                    <ul id="item-add">
+                    </ul>
+                    <button id="checkout-btn">Checkout</button>
+                </div>
                 <div hidden id="checkout">
                     <button id="checkout-close-btn">X</button>
                     <h2>Your Order</h2>
@@ -199,7 +200,7 @@
                             <input type="text" name="phone" id="phone" placeholder="Enter your phone number" required>
                         </div>
                         <div>
-                            <label for="credit-number">Phone Number</label>
+                            <label for="credit-number">Credit Card Number</label>
                             <input type="text" name="phone" id="credit-number" placeholder="Enter your credit card number" required>
                         </div>
                         <div id="submit-container">

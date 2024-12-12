@@ -117,3 +117,37 @@ footer p {
     font-size: 1.5rem;
     margin-top: 0;
 }
+
+@media screen and (max-width: 800px) {
+    #brand h1, footer h2 {
+        font-size: 3rem;
+    }
+    img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    header nav ul {
+        gap: 0;
+    }
+
+    header nav li, footer p {
+        font-size: 1rem;
+    }
+
+    #search {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header nav ul {
+        flex-direction: column;
+    }
+    footer, footer ul {
+        flex-direction: column;
+    }
+
+    footer h2 {
+        text-align: center;
+    }
+}
