@@ -92,3 +92,40 @@ main p {
     overflow: auto;
     background-color: #fefae0;
 }
+
+.increase:hover, .decrease:hover {
+    color: brown;
+    cursor: pointer;
+}
+
+.add-btn {
+    background-color: brown;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2rem;
+    box-shadow: 5px 5px 5px rosybrown;
+}
+
+.add-btn:hover {
+    background-color: #fefae0;
+    color: black;
+    transform: translate(5px, 5px);
+}
+
+#item-add {
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.item-cart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart-remove {
+    color: brown;
+    cursor: pointer;
+}
