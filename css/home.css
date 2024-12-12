@@ -47,3 +47,21 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
 }
+
+@media screen and (max-width: 450px) {
+    .sect-info {
+        flex-direction: column;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .sect-info h2 {
+        font-size: 2rem;
+    }
+
+    .sect-info p {
+        font-size: 1rem;
+    }
+}
