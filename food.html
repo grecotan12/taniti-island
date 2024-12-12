@@ -44,12 +44,13 @@
         <main>
             <h2>Online Shop</h2>
             <p>Click and hold on image to zoom in</p>
+            <p><a href="#restaurants">Click here</a> if you want direction for dine in</p>
             <section id="online-shop">
                 <div id="cart">
                     <h3><i class="fa-solid fa-cart-shopping"></i>Cart</h3>
                     <ul id="item-add">
                     </ul>
-                    <button>Checkout</button>
+                    <button id="checkout-btn">Checkout</button>
                 </div>
                 <div id="item-container">
                     <div class="card">
@@ -58,7 +59,7 @@
                         <h4>Quantities</h4>
                         <div class="qty">
                             <i class="decrease fa-solid fa-angle-left fa-2x"></i>
-                            <span class="qty-runtime">0</span>
+                            <span>0</span>
                             <i class="increase fa-solid fa-angle-right fa-2x"></i>
                         </div>
                         <button class="add-btn">Add To Cart</button>
@@ -152,10 +153,85 @@
                         <button class="add-btn">Add To Cart</button>
                     </div>
                 </div>
+                <div hidden id="checkout">
+                    <button id="checkout-close-btn">X</button>
+                    <h2>Your Order</h2>
+                    <ul id="orders"></ul>
+                    <h2>Thank You</h2>
+                    <div id="payment-con">
+                        <button id="payment">Payment</button>
+                    </div>
+                </div>
+                <div hidden id="pay">
+                    <button id="payment-close-btn">X</button>
+                    <h2>Enter your info</h2>
+                    <form id="payment-form">
+                        <div>
+                            <label for="name">Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div>
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" placeholder="Enter your address" required>
+                        </div>
+                        <div>
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city" placeholder="Enter your city" required>
+                        </div>
+                        <div>
+                            <label for="state">State</label>
+                            <input type="text" name="state" id="state" placeholder="Enter your state" required>
+                        </div>
+                        <div>
+                            <label for="zip">Zip Code</label>
+                            <input type="text" name="zip" id="zip" placeholder="Enter your zip" required>
+                        </div>
+                        <div>
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country" placeholder="Enter your country" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input type="text" name="phone" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div>
+                            <label for="credit-number">Phone Number</label>
+                            <input type="text" name="phone" id="credit-number" placeholder="Enter your credit card number" required>
+                        </div>
+                        <div id="submit-container">
+                            <button type="submit" id="submit-btn">Submit Order</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="thanks" hidden>
+                    <h2>Thank You</h2>
+                    <h2>You order has been placed. You can close the windows</h2>
+                    <h2>It will take 15-30 minutes</h2>
+                    <button id="thanks-close-btn">Click here to close</button>
+                </div>
+            </section>
+            <section id="restaurants">
+                <h2>Fish Restaurant One</h2>
+                <p>123 Street One, Tahini Island</p>
+                <h2>Fish Restaurant Two</h2>
+                <p>456 Street Two, Tahini Island</p>
+                <h2>Fish Restaurant Three</h2>
+                <p>789 Street Three, Tahini Island</p>
             </section>
         </main>
         <footer>
-
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://www.freepik.com/">Freepik (Premium License)</a></li>
+                <li><a href="https://unsplash.com/license">Unplash</a></li>
+                <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+                <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+            </ul>
         </footer>
         <script src="javascript/food.js"></script>
         <script src="https://kit.fontawesome.com/5695800788.js" crossorigin="anonymous"></script>

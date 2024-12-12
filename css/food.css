@@ -8,11 +8,20 @@ main {
     background-color: #dda15e;
 }
 
-#cart h3 {
+#cart h3, #checkout-form h3 {
     font-size: 3rem;
     text-align: center;
     color: white;
     font-family: 'Dancing Script', cursive;
+}
+
+#checkout h2 {
+    border-bottom: 5px solid #dda15e;
+}
+
+#checkout-form h3 {
+    color: black;
+    padding: 10px;
 }
 
 main h2 {
@@ -60,6 +69,7 @@ main p {
     height: auto;
     width: auto;
     border-radius: 20px;
+    box-shadow: 5px 5px 5px rosybrown;
 }
 
 .card img:active {
@@ -84,6 +94,11 @@ main p {
     justify-content: space-around;
     align-items: center;
     padding: 5px;
+    box-shadow: 5px 5px 5px rosybrown;
+}
+
+#cart h3 {
+    text-shadow: 4px 5px brown;
 }
 
 #cart #item-add {
@@ -98,7 +113,7 @@ main p {
     cursor: pointer;
 }
 
-.add-btn {
+.add-btn, #checkout-btn, #payment, #submit-btn, #thanks-close-btn {
     background-color: brown;
     border-radius: 15px;
     color: white;
@@ -108,7 +123,7 @@ main p {
     box-shadow: 5px 5px 5px rosybrown;
 }
 
-.add-btn:hover {
+.add-btn:hover, #checkout-btn:hover, #checkout-close-btn:hover, #payment:hover, #submit-btn:hover, #thanks-close-btn:hover {
     background-color: #fefae0;
     color: black;
     transform: translate(5px, 5px);
@@ -125,7 +140,81 @@ main p {
     align-items: center;
 }
 
-.cart-remove {
+.cart-remove:hover {
     color: brown;
     cursor: pointer;
+}
+
+#restaurants {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#checkout, #pay, #thanks {
+    margin: auto;
+    width: 800px;
+    height: 800px;
+    position: fixed;
+    background: #fefae0;
+    top: 50%;
+    left: 50%;
+    margin-top: -400px;
+    margin-left: -400px;
+    border: 5px solid #dda15e;
+}
+
+#checkout-close-btn, #payment-close-btn {
+    float: right;
+    background-color: indianred;
+    color: white;
+}
+
+#checkout-close-btn:hover, #payment-close-btn:hover {
+    transform: none;
+}
+
+#orders {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    height: 400px;
+    overflow: auto;
+}
+
+#payment-con, #submit-container {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    width:180px;
+    clear:left;
+    text-align:right;
+    padding-right:20px;
+}
+
+input, label {
+    float:left;
+    margin-bottom: 20px;
+}
+
+#thanks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
