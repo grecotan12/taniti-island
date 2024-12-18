@@ -152,3 +152,11 @@ document.getElementById("submit-btn").addEventListener("click", () => {
     total = 0;
     document.getElementById("thanks").hidden = false;
 })
+
+document.getElementById("instruction-btn").addEventListener("click", () => {
+    document.getElementById("instruction-info").hidden = false;
+});
+
+document.getElementById("instruction-close-btn").addEventListener("click", () => {
+    document.getElementById("instruction-info").hidden = true;
+})

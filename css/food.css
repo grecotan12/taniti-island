@@ -101,7 +101,7 @@ main p {
     text-shadow: 4px 5px brown;
 }
 
-#cart #item-add {
+#cart #item-add, #instruction-info ol {
     width: 100%;
     height: 50%;
     overflow: auto;
@@ -113,7 +113,7 @@ main p {
     cursor: pointer;
 }
 
-.add-btn, #checkout-btn, #payment, #submit-btn, #thanks-close-btn {
+.add-btn, #checkout-btn, #payment, #submit-btn, #thanks-close-btn, #instruction-btn {
     background-color: brown;
     border-radius: 15px;
     color: white;
@@ -123,7 +123,16 @@ main p {
     box-shadow: 5px 5px 5px rosybrown;
 }
 
-.add-btn:hover, #checkout-btn:hover, #checkout-close-btn:hover, #payment:hover, #submit-btn:hover, #thanks-close-btn:hover {
+#instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.add-btn:hover, #checkout-btn:hover, #checkout-close-btn:hover, #payment:hover, #submit-btn:hover, #thanks-close-btn:hover, #instruction-btn:hover, #instruction-close-btn:hover {
     background-color: #fefae0;
     color: black;
     transform: translate(5px, 5px);
@@ -150,7 +159,7 @@ main p {
     padding-bottom: 5%;
 }
 
-#checkout, #pay, #thanks {
+#checkout, #pay, #thanks, #instruction-info {
     width: 800px;
     height: 800px;
     position: fixed;
@@ -162,13 +171,13 @@ main p {
     border: 5px solid #dda15e;
 }
 
-#checkout-close-btn, #payment-close-btn {
+#checkout-close-btn, #payment-close-btn, #instruction-close-btn {
     float: right;
     background-color: indianred;
     color: white;
 }
 
-#checkout-close-btn:hover, #payment-close-btn:hover {
+#checkout-close-btn:hover, #payment-close-btn:hover, #instruction-close-btn:hover {
     transform: none;
 }
 
@@ -211,15 +220,26 @@ input, label {
     margin-bottom: 20px;
 }
 
-#thanks {
+#thanks, #instruction-info ol {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
+#instruction-info ol {
+    justify-content: space-evenly;
+    margin-top: 25%;
+}
+
+#instruction-info li {
+    font-size: 1.2rem;
+    font-family: "Times New Roman", Times, serif;
+    width: 50%;
+}
+
 @media screen and (max-width: 800px) {
-    #checkout, #pay, #thanks {
+    #checkout, #pay, #thanks , #instruction-info {
         width: 600px;
         height: 600px;
         margin-top: -300px;
@@ -274,7 +294,7 @@ input, label {
         margin-bottom: 20px;
     }
 
-    #checkout, #pay, #thanks {
+    #checkout, #pay, #thanks, #instruction-info {
         width: 400px;
         height: 450px;
         margin-top: -200px;
@@ -296,7 +316,7 @@ input, label {
 }
 
 @media screen and (max-width: 400px) {
-    #checkout, #pay, #thanks {
+    #checkout, #pay, #thanks, #instruction-info {
         width: 350px;
         margin-left: -175px;
     }
